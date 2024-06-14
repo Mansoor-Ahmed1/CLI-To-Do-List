@@ -39,24 +39,7 @@ if (ask_to_add_task.ask_to_add == true) {
         console.log(to_do_tasks); //consolling the list with the uer's addition.
     }
 }
+// consolling each item line-by-line
 for (let i = 0; i < to_do_tasks.length; i++) {
     console.log(to_do_tasks[i]);
 }
-let ask_to_remove_item = await inquirer.prompt([
-    {
-        name: "remove_item",
-        type: "confirm",
-        default: "false",
-        message: "Would you like to delete any item from To-Do List?",
-    }
-]);
-// let remove_item = await inquirer.prompt(
-//     [
-//         {
-//             name:"remove_item",
-//             type:"list",
-//             choices:"",
-//             message:"Which which of the task would you like to delete from To-Do List?",
-//         }
-//     ]
-// )
