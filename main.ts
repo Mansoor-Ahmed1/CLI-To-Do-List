@@ -1,6 +1,6 @@
 import inquirer from "inquirer"
 
-let to_do_tasks: string[] = []
+export let to_do_tasks: string[] = []
 let condition: boolean = true
 
 console.log(to_do_tasks)
@@ -50,6 +50,12 @@ if (ask_to_add_task.ask_to_add == true) {
         console.log(to_do_tasks) //consolling the list with the uer's addition.
     }
 }
+
+// consolling each item line-by-line
+for(let i = 0 ; i < to_do_tasks.length; i++){
+    console.log(to_do_tasks[i])
+}
+
 
 let ask_to_remove_item = await inquirer.prompt(
     [

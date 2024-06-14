@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-let to_do_tasks = [];
+export let to_do_tasks = [];
 let condition = true;
 console.log(to_do_tasks);
 let ask_to_add_task = await inquirer.prompt([
@@ -38,6 +38,9 @@ if (ask_to_add_task.ask_to_add == true) {
         condition = addTask.add_todo; // updating variable condition if user don't want to add anymore tasks
         console.log(to_do_tasks); //consolling the list with the uer's addition.
     }
+}
+for (let i = 0; i < to_do_tasks.length; i++) {
+    console.log(to_do_tasks[i]);
 }
 let ask_to_remove_item = await inquirer.prompt([
     {
